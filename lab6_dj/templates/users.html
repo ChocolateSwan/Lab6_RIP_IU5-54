@@ -1,0 +1,19 @@
+{% extends 'base_page.html' %}
+
+{% block title %}
+    Lab_6_RIP
+{% endblock %}
+
+{% block head %}
+    Пользователи
+{% endblock %}
+
+{% block body %}
+    Список пользователей:
+    {% for i in users %}
+    <br> {{i.first_name}}  {{i.last_name}}  {{i.tel_number}}
+
+    {% empty %}
+    Список пуст
+    {% endfor %}
+{% endblock %}
